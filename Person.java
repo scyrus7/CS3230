@@ -6,7 +6,7 @@
  * @author Sam
  *
  */
-public class Person {
+public class Person2 {
 	
 	private String Name;
 	private String Address;
