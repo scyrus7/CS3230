@@ -1,76 +1,65 @@
-/**
- * 
- */
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
-/**
- * @author Sam
- *
- */
-public class Person {
+
+public class Person extends Address 
+{
+	private String Fname;
+	private String Lname;
+	private String Dob;
 	
-	private String Name;
-	private String Address;
-	private String City;
-	private String State;
-	private String ZipCode;
-	private char PhoneNumber;
-	private char DateOfB;
-	
-	public Person(String n, String a, String c, String s, String zc, char pn, char db)
+	public Person(String a, String c, String s, String zc, String pn, String fn, String ln)
 	{
-		Name = n;
-		Address = a;
-		City = c;
-		State = s;
-		ZipCode = zc;
-		PhoneNumber = pn;
-		DateOfB = db;
+		super(a, c, s, zc, pn);
+		// TODO Auto-generated constructor stub
+		Fname = fn;
+		Lname = ln;
+		
 	}
 	
-	public String getName() {
-		return Name;
-	}
-	public void setName(String name) {
-		Name = name;
-	}
-	public String getAddress() {
-		return Address;
-	}
-	public void setAddress(String address) {
-		Address = address;
-	}
-	public String getCity() {
-		return City;
-	}
-	public void setCity(String city) {
-		City = city;
-	}
-	public String getState() {
-		return State;
-	}
-	public void setState(String state) {
-		State = state;
-	}
-	public String getZipCode() {
-		return ZipCode;
-	}
-	public void setZipCode(String zipCode) {
-		ZipCode = zipCode;
-	}
-	public char getPhoneNumber() {
-		return PhoneNumber;
-	}
-	public void setPhoneNumber(char phoneNumber) {
-		PhoneNumber = phoneNumber;
-	}
-	public char getDateOfB() {
-		return DateOfB;
-	}
-	public void setDateOfB(char dateOfB) {
-		DateOfB = dateOfB;
+	public Person(String Address, String City, String State, String ZipCode, String PhoneNumber, String Fname, String Lname, String dob)
+	{
+		super(Address, City, State, ZipCode, PhoneNumber);
+		this.Fname = Fname;
+		this.Lname = Lname;
+		Dob = dob;			
 	}
 	
+
+	@Override
+	public String getInfo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+		
+	public String getFname() {
+		return Fname;
+	}
+
+	public void setFname(String fname) {
+		Fname = fname;
+	}
+
+	public String getLname() {
+		return Lname;
+	}
+
+	public void setLname(String lname) {
+		Lname = lname;
+	}
 	
-	
+	public String getDob() {
+		return Dob;
+	}
+
+	public void setDob(String dob) {
+		Dob = dob;
+	}
+
+	public String toString()
+	{
+		return "Address : \n" + this.getAddress() +" City: \n" + this.getCity() +" State: \n" + this.getState();
+	}
 
 }
